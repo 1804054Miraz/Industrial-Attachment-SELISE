@@ -1,0 +1,7 @@
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let task of tasks">
+      {{ task }}
+      <button class="btn btn-danger btn-sm float-right" (click)="removeTask(task)">Remove</button>
+    </li>
+  </ul>
+  
