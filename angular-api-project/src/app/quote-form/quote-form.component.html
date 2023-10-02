@@ -1,1 +1,8 @@
-<p>quote-form works!</p>
+<form>
+    <div class="form-group">
+      <label for="numberOfQuotes">Number of Quotes:</label>
+      <input type="number" id="numberOfQuotes" [(ngModel)]="numQuotes" name="numberOfQuotes" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="fetchQuotes()">Fetch Quotes</button>
+  </form>
+  
