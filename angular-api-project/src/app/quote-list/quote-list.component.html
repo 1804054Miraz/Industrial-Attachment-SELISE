@@ -1,0 +1,9 @@
+<div class="form-center">
+    <ul>
+      <li *ngFor="let quote of quotes">
+          <p>{{ quote.sentence }}</p>
+          <footer>- {{ quote.character.name }}</footer>
+      </li>
+    </ul>
+  </div>
+  

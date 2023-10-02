@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -7,14 +7,14 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./quote-list.component.css']
 })
 export class QuoteListComponent implements OnInit {
-  @Input() quotes: any[] = [];
+ @Input() quotes: any[] = [];
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get('https://api.gameofthronesquotes.xyz/v1/random/7/').subscribe((data: any) => {
+    this.http.get('https://api.gameofthronesquotes.xyz/v1/random/5').subscribe((data: any) => {
       this.quotes = data;
-      console.log(this.quotes);
+      console.log(data);
     });
   }
 }

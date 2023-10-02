@@ -1,8 +1,14 @@
-<form>
+<form class="form-center">
     <div class="form-group">
-      <label for="numberOfQuotes">Number of Quotes:</label>
+      <label for="numberOfQuotes">Number of quotes I want: </label>
+      <br>
       <input type="number" id="numberOfQuotes" [(ngModel)]="numQuotes" name="numberOfQuotes" class="form-control">
+      <br>
+      <button type="submit" class="btn btn-primary" (click)="fetchQuotes()">Click</button>
     </div>
-    <button type="submit" class="btn btn-primary" (click)="fetchQuotes()">Fetch Quotes</button>
+    <div class="form-group">
+     
+    </div>
+    
   </form>
   
