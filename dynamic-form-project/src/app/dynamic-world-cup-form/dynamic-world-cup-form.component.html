@@ -1,0 +1,16 @@
+<form [formGroup]="worldCupForm" (ngSubmit)="submitForm()">
+    <div formArrayName="countries">
+      <div *ngFor="let countryControl of countries.controls; let i = index">
+        <div [formGroupName]="i">
+          <!-- Form fields for each country -->
+          <label for="name">Name:</label>
+          <input type="text" id="name" formControlName="name" required>
+          <!-- Add more form fields for year, captain, score, stadium, manOfTheMatch, manOfTheSeries -->
+        </div>
+      </div>
+    </div>
+    <button type="button" (click)="addCountry()">Add Country</button>
+    <button type="submit">Submit</button>
+  </form>
+  
+  

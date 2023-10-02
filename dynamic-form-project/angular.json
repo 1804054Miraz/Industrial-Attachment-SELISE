@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "form-project": {
+    "dynamic-form-project": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/form-project",
+            "outputPath": "dist/dynamic-form-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "form-project:build:production"
+              "browserTarget": "dynamic-form-project:build:production"
             },
             "development": {
-              "browserTarget": "form-project:build:development"
+              "browserTarget": "dynamic-form-project:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "form-project:build"
+            "browserTarget": "dynamic-form-project:build"
           }
         },
         "test": {
@@ -96,6 +96,6 @@
     }
   },
   "cli": {
-    "analytics": "145c5ce9-7bca-4f97-865c-dbaaff4f2327"
+    "analytics": "868c3c8a-aaed-4988-bf4f-5d7ec2c40e54"
   }
 }

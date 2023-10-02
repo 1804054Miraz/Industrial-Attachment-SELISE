@@ -3,20 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListComponent } from './list/list.component';
-import { FormComponent } from './form/form.component';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { DynamicWorldCupFormComponent } from './dynamic-world-cup-form/dynamic-world-cup-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent,
-    FormComponent
+    HomeComponent,
+    AboutComponent,
+    DynamicWorldCupFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

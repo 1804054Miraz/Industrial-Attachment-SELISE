@@ -1,0 +1,17 @@
+<p>about works!</p>
+<div>
+   <ul *ngFor="let item of fruits">
+        <li>{{item}}</li>
+   </ul>
+</div>
+<div >
+    <ul *ngFor="let employee of employees">
+        <li class="form-center">
+          <strong>Name:</strong> {{ employee.name }}<br>
+          <strong>Employee ID:</strong> {{ employee.employeeId }}<br>
+          <strong>Department:</strong> {{ employee.department }}<br>
+          <strong>Qualification:</strong> {{ employee.qualification }}
+        </li>
+      </ul>
+</div>
+    <!-- <input type="text" class="form-control" id="name"> -->
