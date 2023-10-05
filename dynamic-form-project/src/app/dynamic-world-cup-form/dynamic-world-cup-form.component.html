@@ -1,3 +1,5 @@
+
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <form [formGroup]="worldCupForm" (ngSubmit)="submitForm()">
     <div formArrayName="countries">
       <div *ngFor="let countryControl of countries.controls; let i = index">
@@ -5,6 +7,8 @@
           <!-- Form fields for each country -->
           <label for="name">Name:</label>
           <input type="text" id="name" formControlName="name" required>
+          <label for="name">year:</label>
+          <input type="text" id="year" formControlName="name" required>
           <!-- Add more form fields for year, captain, score, stadium, manOfTheMatch, manOfTheSeries -->
         </div>
       </div>
@@ -12,5 +16,33 @@
     <button type="button" (click)="addCountry()">Add Country</button>
     <button type="submit">Submit</button>
   </form>
+
+
+  <form>
+    <div>
+        <ng-container *ngIf="countries">
+            <div *ngFor="let item of countries?.value" >
+                <li  class="info">
+                        {{item.name}}
+                        {{item.year}}
+                        {{item.captain}}
+                        {{item.score}}
+                        {{item.stadium}}
+                        {{item.manOfTheMatch}}
+                        {{item.manOfTheSeries}}
+                </li>
+               <!-- console.log(item); -->
+            </div>
+          </ng-container>
+    </div>
+    
+  </form>
+
+  <!-- <div class="form__group">
+    <input type="text" class="form__input" id="name" placeholder="Full name" required="" />
+    <label for="name" class="form__label">Full Name</label>
+  </div> -->
+  
+
   
   

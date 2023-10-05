@@ -18,8 +18,8 @@ export class DynamicWorldCupFormComponent {
   addCountry() {
     const countryFormGroup = this.fb.group({
       name: ['', Validators.required],
-      year: ['', Validators.required],
-      captain: [''],
+      year: ['44', Validators.required],
+      captain: ['44'],
       score: [''],
       stadium: [''],
       manOfTheMatch: [''],
