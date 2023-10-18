@@ -1,9 +1,8 @@
-// app.js
-
 const express = require('express');
 const mongoose = require('mongoose');
 
 const app = express();
+app.use(express.json());
 const port = process.env.PORT || 3000;
 
 // Connect to MongoDB
@@ -38,9 +37,25 @@ app.get('/api/items', async (req, res) => {
       res.status(500).json({ error: 'Error fetching data' });
     }
   });
-  
 
-// Start the Express server
+app.post('/api/items', async (req, res) => {
+    try {
+        const { name, description } = req.body;
+        const newItem = new Item({
+            
+                "name": "Item 4",
+                "description": "This is a new item"
+        });
+        await newItem.save();
+        res.status(201).json({
+        message: 'Hurrah! Item successfully created'
+      }); // Respond with the newly created item
+    }
+    catch (error) {
+      res.status(500).json({ error: 'Error creating item' });
+    }
+  });
+  
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
