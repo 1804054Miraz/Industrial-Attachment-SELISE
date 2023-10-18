@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { QuoteListComponent } from './quote-list/quote-list.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ItemListComponent } from './item-list/item-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteListComponent,
-    QuoteFormComponent
+    QuoteFormComponent,
+    ItemListComponent
   ],
   imports: [
     BrowserModule,
