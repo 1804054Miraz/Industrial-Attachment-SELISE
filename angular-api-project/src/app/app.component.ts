@@ -12,6 +12,9 @@ interface Quote {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   apiQuotes: any[] = [];
   num: number = 0;
   constructor(private http: HttpClient) { }
