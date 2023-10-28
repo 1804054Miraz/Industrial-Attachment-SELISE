@@ -8,7 +8,7 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  menuType: string = 'someValue';
+  menuType: string = 'default';
   sellerName:string="";
   userName:string="";
   searchResult:undefined|product[];
