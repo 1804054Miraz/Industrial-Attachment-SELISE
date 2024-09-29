@@ -1,3 +1,4 @@
 # Industrial-Attachment-SELISE
 
-# In this repository, there are some angular projects and some simple projects
+# There are some angular projects.
+# Some simple projects with HTML, CSS, JavaScript
